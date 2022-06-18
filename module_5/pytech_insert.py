@@ -14,11 +14,12 @@ max = {
   "last_name": "Levchin"
  }
 
-michael = {
+michael = { 
   "student_id": "1008",
   "first_name": "Michael",
   "last_name": "Widenius"
  }
+
 
 pierre = {
   "student_id": "1009",
@@ -27,12 +28,22 @@ pierre = {
  }
 
 
-''' Adding values from above to MongoDB > pytech > students collection '''
+''' Adding values from above to MongoDB > pytech > students collection 
 max_student_id = students.insert_one(max).inserted_id
 michael_student_id = students.insert_one(michael).inserted_id
 pierre_student_id = students.insert_one(pierre).inserted_id
-
+'''
 
 print("-- INSERT STATEMENTS --")
 for docs in students.find():
   print("Inserted student record", docs["first_name"], docs["last_name"], "into the students collection with student_id", docs[ "student_id"])
+
+
+''' Adding values from above to MongoDB > pytech > students collection
+max_student_id = students.insert_one(max).inserted_id
+michael_student_id = students.insert_one(michael).inserted_id
+pierre_student_id = students.insert_one(pierre).inserted_id
+'''
+
+for docs in students.find():
+  print(docs["student_id"])
