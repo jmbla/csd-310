@@ -1,2 +1,2 @@
 # csd-310
-Database Development and Use
+Repo of projects and assignments - Database Development and Use
