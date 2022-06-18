@@ -1,18 +1,10 @@
-MongoDB: insert_one() Example
-  fred = {"first_name": "Fred"}
+students = { "student_id": "1007",
+  "first_name": "Joe",
+  "last_name": "Black"
+ }
+
+
+student_id = students.insert_one(students).inserted_id
   
-  fred_employee_id = employees.insert_one(fred).inserted_id
-  
-  print(fred_employee_id)
-  
-  MongoDB: find() Example
-    docs = db.collection_name.find()
-    
-    for doc in docs:
-      print(doc)
-      MongoDB: find_one() Exmaple
-        doc = db.collection_name.find_one({"employee_id": "1007"})
-        
-        print(doc["employee_id"])
-        
+print(student_id)
   
