@@ -27,5 +27,3 @@ docs = db.students.find({"student_id": "1008"})
 print(docs)
 
 print(students.find_one({"student_id": "1008"}))
-
-
