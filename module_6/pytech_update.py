@@ -12,11 +12,11 @@ students = db['students']
 print("-- DISPLAYING STUDENTS DOCUMENTS FROM find() QUERY --")
 
 for docs in students.find({}):
-    print("  Student ID: " + docs["student_id"] + "\n  First Name: " + docs["first_name"] + "\n  Last Name: " + docs["last_name"] + "\n")
+    print("Student ID: " + docs["student_id"] + "\nFirst Name: " + docs["first_name"] + "\nLast Name: " + docs["last_name"] + "\n")
     print()
 
 result = students.update_one({"student_id": "1007"}, {"$set": {"last_name": "Smith"}})
 
 docs = students.find_one({"student_id": "1007"})
 print("-- DISPLAYING UPDATED STUDENT DOCUMENT FROM find_one() QUERY --")
-print("  Student ID: " + docs["student_id"] + "\n  First Name: " + docs["first_name"] + "\n  Last Name: " + docs["last_name"] + "\n")
+print("Student ID: " + docs["student_id"] + "\nFirst Name: " + docs["first_name"] + "\nLast Name: " + docs["last_name"] + "\n")
