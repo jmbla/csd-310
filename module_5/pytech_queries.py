@@ -18,7 +18,7 @@ for docs in students.find({}):
     print()
 
 docs = students.find_one({"student_id": "1008"})
-print("-- DISPLAYING STUDENT DOCUMENT FROM find_one() QUERY --")
+print("-- DISPLAYING UPDATED STUDENT DOCUMENT FROM find_one() QUERY --")
 print("Student ID: ", docs["student_id"])
 print("First Name:", docs["first_name"])
 print("Last Name:", docs["last_name"])
